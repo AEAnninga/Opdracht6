@@ -1,0 +1,81 @@
+.wrapper {
+    height: 100%;
+    display: grid;
+    gap: 3px;    
+    grid-template-columns: repeat (10, 1fr);
+    grid-template-rows: 1fr 7fr 3fr 1fr;
+    grid-template-areas: 
+        "h h h h h h h h h h"
+        "m m m m m m m m m m"
+        "w w w w w w w w w w"
+        "f f f f f f f f f f"    
+    ;
+}
+
+.header {
+    background-color: #69c;
+    color: white;
+    grid-area: h;
+    border-radius: 5px;
+}
+
+.main {
+    background-color: rgb(87, 185, 87);
+    color: white;
+    grid-area: m;
+    border-radius: 5px;    
+}
+
+.widget_area {
+    background-color: rgb(173, 53, 173);
+    color: white;
+    grid-area: w;
+    border-radius: 5px;
+}
+
+.footer {
+    background-color: rgb(0, 110, 255);
+    color: white;
+    grid-area: f;
+    border-radius: 5px;
+}
+
+html, body {
+    box-sizing: border-box;        
+    background-color: bisque;
+    height: 100%;
+    padding: 10px;
+    margin: 0px;    
+}
+
+@media (min-width:1024px) {
+    .wrapper {
+        height: 100%;
+        display: grid;
+        gap: 3px;    
+        grid-template-columns: repeat (10, 1fr);
+        grid-template-rows: 1fr 7fr 3fr 1fr;
+        grid-template-areas: 
+            "h h m m m m m m m m"
+            "h h m m m m m m m m"
+            "h h w w w w w w w w"
+            "h h f f f f f f f f"    
+        ;
+    }    
+}
+
+@media (min-width:2048px) {
+    .wrapper {
+        height: 100%;
+        display: grid;
+        gap: 3px;    
+        grid-template-columns: repeat (10, 1fr);
+        grid-template-rows: 1fr 7fr 3fr 1fr;
+        grid-template-areas: 
+            "h h m m m m m m w w"
+            "h h m m m m m m w w"
+            "h h m m m m m m w w"
+            "h h f f f f f f w w"    
+        ;
+    }    
+}
